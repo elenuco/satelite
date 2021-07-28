@@ -12,7 +12,8 @@ public function insertar_alumno($data){
 
 public function delete_grado($alm_id){
 $this->db->where('alm_id', $alm_id);
-$this->db->delete('alm_alumno')
+$this->db->delete('alm_alumno');
 }
+
 }
 ?>

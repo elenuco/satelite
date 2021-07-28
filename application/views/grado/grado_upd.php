@@ -43,11 +43,13 @@
 
 	                            	<div class="row justify-content-md-center">
 	                            		<div class="col-lg-10">
-			                                <form method="post" action="<?php echo base_url(); ?>index_controller /guardar_grado" >
-													
+										<?php foreach ($grd_id as $data) { ?>
+			                                <form method="post" action="<?php echo base_url(); ?>index_controller/actualizar_grado" >
+											<input type="hidden" name="grd_id" value="<?php  echo $data->grd_id; ?>">
+
 												<div class="form-group">
 													<label>Grado:</label>
-													<input type="text" name="consultorio" required="" class="form-control input-rounded" maxlength="50" autofocus="" >
+													<input type="text" name="grado" required="" class="form-control input-rounded" maxlength="50" autofocus="" >
 												</div>
 												
 												<div class="form-group">
@@ -55,6 +57,7 @@
 												</div>
 												
 			                                </form>
+											<?php } ?>
 		                                </div>
 	                                </div>
 

@@ -34,7 +34,7 @@
 
                                                                 <a class="dropdown-item" href="<?php echo base_url();?>index_controller/delete_grado?grd_id=<?=$r->grd_id; ?>">Eliminar</a>
 
-                                                                <a class="dropdown-item" href="<?php echo base_url();?>accion_grado?grd_id=<?=$r->grd_id; ?>">Editar</a>
+                                                                <a class="dropdown-item" href="<?php echo base_url();?>index_controller/accion_grado?grd_id=<?=$r->grd_id; ?>">Editar</a>
 
                                                             </div>
 

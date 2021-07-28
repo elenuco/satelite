@@ -22,12 +22,12 @@
 	 {
 		$grado=$this->grd_grado_model->lista_grado();
 		$data['grado']=$grado;
-		$this->load->view('grado_vistas',$data);
+		$this->load->view('grado/grado_nuevo',$data);
 	 }
 	 //guardar grado
 	 public function guardar_grado() {
-		$data['grado']=$_POST["grado"];
-		$this->grd_grado_model->insertar($data);
+		$data['grd_grado']=$_POST["grado"];
+		$this->grd_grado_model->insertar_grado($data);
  
 	   redirect('/index_controller/');
 	}
@@ -40,7 +40,7 @@
 	//actualizar grado//
 	public function actualizar_grado() {
 		$data['grd_id']=$_POST["grd_id"];
-		$data['grado']=$_POST["grado"];
+		$data['grd_grado']=$_POST["grado"];
 	   $this->grd_grado_model->update_grado($data);
 	   redirect('/index_controller/');
 	}

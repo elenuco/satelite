@@ -17,14 +17,14 @@ class grd_grado_model extends CI_Model
 	}
 	//borrar grado
 	public function delete_grado($grd_id) {
-		$this->db->where('$grd_id', $grd_id);
+		$this->db->where('grd_id', $grd_id);
     	$this->db->delete('grd_grado');
     }
 	//obtener el grd_id de  grado
 	public function obtener_grado($grd_id){
 		$this->db->where('grd_id', $grd_id);
 		$grado= $this->db->get('grd_grado');
-		return $grado->result();
+		return $grado->row();
     }
 	//actualizar grado
 	public function update_grado($data){

@@ -11,11 +11,14 @@
 <body>
     <header>
         <div class="row">
-      <a href="<?php echo base_url(); ?>alumno_controller/alumno_lista">Alumnos</a> </li>
+      <a href="<?php echo base_url(); ?>alumno_controller/alumno_lista">Alumnos</a>
+      <a href="<?php echo base_url(); ?>materias_controller/materia_lista">Materias</a> 
+      <a href="<?php echo base_url(); ?>index_controller/">Grado</a> 
         </div>
     </header>
 <table id="dataTable" style="text-align: center;" style="text-align: center;" class="table table-bordered table-hover">
 <li> <a href="<?php echo base_url(); ?>index_controller/nuevo_grado">Nuevo Grado</a> </li>
+
                                         <thead class="thead thead-dark" >
                                             <tr>
                                                 <th>Grado</th>

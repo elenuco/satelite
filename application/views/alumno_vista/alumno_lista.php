@@ -17,7 +17,7 @@
         </div>
     </header>
 <table id="dataTable" style="text-align: center;" style="text-align: center;" class="table table-bordered table-hover">
-<li> <a href="<?php echo base_url(); ?>index_controller/nuevo_grado">Nuevo Grado</a> </li>
+<li> <a href="<?php echo base_url(); ?>alumno_controller/nuevo_grado">Nuevo Grado</a> </li>
                                         <thead class="thead thead-dark" >
                                             <tr>
                                                 <th>Alumno</th>
@@ -25,18 +25,22 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php foreach ($alumno as $r): ?>
+                                            <?php foreach ($alumno as $temp): ?>
                                                 <tr>
-                                                    <td><?=$r->alm_alumno; ?></td>
+                                                <td> <?=$temp->código; ?> </td>    
+                                                <td> <?=$temp->nombre; ?> </td>
+                                                <td> <?=$temp->sexo; ?> </td>
+                                        <td> <?=$temp->grado; ?> </td>
+                                        <td> <?=$temp->observación; ?> </td> 
                                                     <td>
                                                         <div class="dropdown show">
                                                             <a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menú</a>
 
                                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 
-                                                                <a class="dropdown-item" href="<?php echo base_url();?>index_controller/delete_grado?grd_id=<?=$r->grd_id; ?>">Eliminar</a>
+                                                                <a class="dropdown-item" href="<?php echo base_url();?>alumno_controller/delete_alumno?grd_id=<?=$temp->alm_id; ?>">Eliminar</a>
 
-                                                                <a class="dropdown-item" href="<?php echo base_url();?>accion_grado?grd_id=<?=$r->grd_id; ?>">Editar</a>
+                                                                <a class="dropdown-item" href="<?php echo base_url();?>alumno_controller/accion_alumno?grd_id=<?=$temp->alm_id; ?>">Editar</a>
 
                                                             </div>
 

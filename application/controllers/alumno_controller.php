@@ -14,18 +14,18 @@
  	{
       $alumno=$this->alm_alumno_model->lista_alumno();
       $data['alumno']=$alumno;
-      $this->load->view('alumno_vistas/alumno_lista',$data);
+      $this->load->view('alumno_vista/alumno_lista',$data);
 
  	}
 	 // cargar la vista de nuevo grado
 	 public function nuevo_alumno()
 	 {
 		$alumno=$this->alm_alumno_model->lista_grado();
-		$data['grado']=$alumno;
-		$this->load->view('alumno_vistas/grado_vistas',$data);
+		$data['alumno']=$this->alumno->Select();
+		$this->load->view('alumno_vista/grado_vistas',$data);
 	 }
 	 //guardar grado
-	 public function guardar_grado() {
+	 public function guardar_alumno() {
 		$data['grado']=$_POST["grado"];
 		$this->grd_grado_model->insertar($data);
  

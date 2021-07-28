@@ -20,7 +20,7 @@
      
      public function nuevo_materia()
      {
-         $n_materia=$this->
+         $_materia=$this->mat_materia_model->
      }
  }
  ?>

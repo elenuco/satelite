@@ -2,8 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class alm_alumno_model extends CI_Model
 {
-public function index_model(){
-    $alumno=$this->db->("SELECT * FROM	alm_alumno");
+public function lista_alumno(){
+    $alumno=$this->db->query("SELECT * FROM	alm_alumno");
     return $alumno->result();
 }
 public function insertar_alumno($data){

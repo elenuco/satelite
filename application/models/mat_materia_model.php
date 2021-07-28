@@ -20,5 +20,11 @@ class mat_materia_model extends CI_Model
 		$this->db->where('$mat_id', $mat_id);
     	$this->db->delete('materia');
     }
+	//obtener el id 
+	public function obtener_grado($mat_id){
+		$this->db->where('grd_id', $grd_id);
+		$grado= $this->db->get('grd_grado');
+		return $grado->result();
+    }
 }
  ?>

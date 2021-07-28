@@ -11,21 +11,23 @@
 <body>
     <header>
         <div class="row">
-      <a href="<?php echo base_url(); ?>alumno_controller/alumno_lista">Alumnos</a> </li>
+        <a href="<?php echo base_url(); ?>index_controller/index">Grado</a>
+      <a href="<?php echo base_url(); ?>alumno_controller/alumno_lista">Alumno</a>
+      <a href="<?php echo base_url(); ?>materia_controller/alumno_lista">Materia</a>
         </div>
     </header>
 <table id="dataTable" style="text-align: center;" style="text-align: center;" class="table table-bordered table-hover">
 <li> <a href="<?php echo base_url(); ?>index_controller/nuevo_grado">Nuevo Grado</a> </li>
                                         <thead class="thead thead-dark" >
                                             <tr>
-                                                <th>Grado</th>
+                                                <th>Alumno</th>
                                                 <th>Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php foreach ($grado as $r): ?>
+                                            <?php foreach ($alumno as $r): ?>
                                                 <tr>
-                                                    <td><?=$r->grd_grado; ?></td>
+                                                    <td><?=$r->alm_alumno; ?></td>
                                                     <td>
                                                         <div class="dropdown show">
                                                             <a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menú</a>

@@ -43,7 +43,7 @@
 
 	                            	<div class="row justify-content-md-center">
 	                            		<div class="col-lg-10">
-			                                <form method="post" action="<?php echo base_url(); ?>index_controller /guardar_grado" >
+			                                <form method="post" action="<?php echo base_url(); ?>index_controller/guardar_grado" >
 													
 												<div class="form-group">
 													<label>Grado:</label>

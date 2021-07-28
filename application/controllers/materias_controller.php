@@ -1,7 +1,7 @@
 <?php 
  defined('BASEPATH') OR exit('No direct script access allowed'); 
 
- class materia_controller extends CI_Controller
+ class materias_controller extends CI_Controller
  {
  	
     public	function __construct()
@@ -10,7 +10,7 @@
  		$this->load->model('grd_grado_model');
  	}
 
- 	public function index()
+ 	public function materia_lista()
  	{
       $grado=$this->mat_materia_model->lista_materia();
       $data['materia']=$materia;
